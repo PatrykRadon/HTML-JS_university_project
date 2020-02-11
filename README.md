@@ -1,11 +1,11 @@
 # HTML-JS_university_project
 A simple website created to practise using HTML5 CSS3.0 JavaScript and WebWorker technology.
 
-##Dokumentacja projektu nr.1 z Technik Internetowych
+## Dokumentacja projektu nr.1 z Technik Internetowych
 
 
 
-#Temat
+# Temat
 
 Celem projektu jest zaprezentowanie wybranego zagadnienia z matematyki, fizyki czy informatyki.
 
@@ -13,7 +13,7 @@ Tematem mojego projektu jest Wprowadzenie do Uczenia Głębokiego.
 
 
 
-#Założenia
+# Założenia
 
 Temat ten należało zaprezentować z wykorzystaniem graficznych animacji zrealizowanych z wykorzystaniem języka JavaScript, CSS 3.0, Język HTML5.
 
@@ -21,7 +21,7 @@ Strona przechodzi poprawną walidacje na stronie W3C zgodnie z standardem HTML5 
 
 
 
-#Realizacja
+# Realizacja
 
 W projekcie wykorzystano elementy semantyczne języka HTML5
 
