@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+ <title>Podstawy ANN</title>
+</head>
+<body>
+   <header>
+     <div id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <a>
+         <span></span>
+         <span></span>
+         <span></span>
+        </a>
+      </div>
+        <nav class = "web_nav">
+            <img src="img/logo.jpg" id="logo_img" alt="Logo AGH">
+            <ul>
+             <li onclick="showContent('ann_wrapper')">Strona główna</li>
+             <li onclick="showContent('dnn_wrapper')">Sieci Neuronowe wprowadzenie</li>
+             <li onclick="showContent('cnn_wrapper')">Konwolucyjne Sieci Neuronowe</li>
+             <li onclick="showContent('rnn_wrapper')">Rekurencyjne Sieci Neuronowe</li>
+             <li onclick="showContent('about_wrapper')">O Stronie</li>
+            </ul>  
+        </nav>
+      </div>
+   </header>
+
+      <h1 id="main_title"><a id = "t1">Wstęp</a> <a id = "t2">do</a> <a id = "t3">Uczenia Głębokiego</a></h1>
+        <div id="ann_wrapper">
+            <section id="main_sec">
+            <h2 id="main_subtitle">Sztuczne Sieci Neuronowe</h2>
+            <svg width="670px" height="380px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                 <g>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="89.75" cy="130" id="svg_8" rx="25" ry="25"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="89.75" cy="190" id="svg_12" rx="25" ry="24.5"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="90" cy="250" id="svg_6" rx="25" ry="25"/>
+                  <g class="rec1">
+                    <g class = "l1">
+                      <rect transform="rotate(-17, 173.974, 231.316)" id="svg_87" height="1" width="100" y="230.81575" x="123.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none" rx="10"/>
+
+                      <rect transform="rotate(17, 173.974, 141.316)" id="svg_83" height="1" width="100" y="140.81575" x="123.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none" rx="10"/>
+                      <rect transform="rotate(17, 173.974, 201.316)" id="svg_85" height="1" width="100" y="200.81575" x="123.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none" rx="10"/>
+                      <rect transform="rotate(17, 173.974, 262.316)" id="svg_86" height="1" width="100" y="261.81575" x="123.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none" rx="10"/>
+        
+                      <rect rx="10" transform="rotate(42, 174.474, 171.316)" id="svg_91" height="1" width="129" y="170.81575" x="109.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                      <rect rx="10" transform="rotate(42, 174.474, 230.316)" id="svg_92" height="1" width="129" y="229.81575" x="109.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                      <rect rx="10" transform="rotate(56, 174.474, 202.316)" id="svg_124" height="1" width="171" y="201.81575" x="88.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>  
+                    </g>  
+                  <g class = "l2">
+                    <rect rx="10" transform="rotate(42, 342.474, 201.316)" id="svg_3" height="1" width="129" y="200.81575" x="277.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                    <rect rx="10" transform="rotate(42, 346.474, 143.316)" id="svg_5" height="1" width="129" y="142.81575" x="281.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>  <rect rx="10" transform="rotate(16, 343.974, 113.316)" id="svg_16" height="1" width="100" y="112.81575" x="293.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                    <rect rx="10" transform="rotate(16, 342.974, 172.316)" id="svg_20" height="1" width="100" y="171.81575" x="292.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                    <rect rx="10" transform="rotate(16, 342.974, 229.316)" id="svg_21" height="1" width="100" y="228.81575" x="292.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                    <rect rx="10" transform="rotate(56, 345.474, 171.316)" id="svg_22" height="1" width="171" y="170.81575" x="259.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+
+                    </g>
+                  <g class = "l3">
+                    <rect rx="10" transform="rotate(40, 512.474, 173.316)" id="svg_28" height="1" width="129" y="172.81575" x="447.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>  <rect rx="10" transform="rotate(15, 514.974, 145.316)" id="svg_24" height="1" width="100" y="144.81575" x="464.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                    <rect rx="10" transform="rotate(15, 514.974, 201.316)" id="svg_25" height="1" width="100" y="200.81575" x="464.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#6D97AB" fill="none"/>
+                  </g>
+                </g>
+                <g class="rec2">
+                  <g class = "l1">
+                    <rect transform="rotate(-17, 173.974, 112.316)" id="svg_88" height="1" width="100" y="111.81575" x="123.97436" stroke-width="4" stroke="#7AD6CA" fill="none" rx="10"/>
+                    <rect  transform="rotate(-17, 173.974, 231.316)" id="svg_89" height="1" width="100" y="230.81575" x="123.97436" stroke-width="4" stroke="#7AD6CA" fill="none" rx="10"/>
+                    <rect  transform="rotate(-17, 173.974, 171.316)" id="svg_81" height="1" width="100" y="170.81575" x="123.97436" stroke-width="4" stroke="#7AD6CA" fill="none" rx="10"/>
+
+                    <rect  rx="10" transform="rotate(-42, 174.474, 140.316)" id="svg_94" height="1" width="129" y="139.81575" x="109.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect  rx="10" transform="rotate(-42, 174.474, 200.316)" id="svg_93" height="1" width="129" y="199.81575" x="109.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect rx="10" transform="rotate(-56, 175.474, 172.316)" id="svg_23" height="1" width="171" y="171.81575" x="89.97436" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                  </g>               
+                  <g class = "l2">
+                    <rect style="vector-effect: non-scaling-stroke;" rx="10" transform="rotate(-42, 344.474, 169.316)" id="svg_106" height="1" width="129" y="168.81575" x="279.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect style="vector-effect: non-scaling-stroke;" rx="10" transform="rotate(-42, 345.474, 228.316)" id="svg_108" height="1" width="129" y="227.81575" x="280.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect style="vector-effect: non-scaling-stroke;" rx="10" transform="rotate(-15, 342.974, 201.316)" id="svg_11" height="1" width="100" y="200.81575" x="292.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect style="vector-effect: non-scaling-stroke;" rx="10" transform="rotate(-16, 340.974, 142.316)" id="svg_112" height="1" width="100" y="141.81575" x="290.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect rx="10" transform="rotate(-15, 345.077, 256.94)" id="svg_10" height="1" width="100" y="256.4398" x="295.07727" stroke-width="4" stroke="#7AD6CA" fill="none"/>   
+                    <rect rx="10" transform="rotate(-56, 342.474, 198.316)" id="svg_123" height="1" width="171" y="197.81575" x="256.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/> 
+                  </g>
+                  <g class = "l3">
+                    <rect rx="10" transform="rotate(-15, 513.077, 229.94)" id="svg_26" height="1" width="100" y="229.4398" x="463.07727" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                    <rect rx="10" transform="rotate(-15, 514.077, 171.94)" id="svg_27" height="1" width="100" y="171.4398" x="464.07727" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+
+                    <rect rx="10" transform="rotate(-40, 511.474, 200.316)" id="svg_29" height="1" width="129" y="199.81575" x="446.97436" stroke-width="4" stroke="#7AD6CA" fill="none"/>
+                  </g>
+                </g>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="260" cy="280" id="svg_4" rx="25" ry="25"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="259.75" cy="160" id="svg_7" rx="25" ry="25"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="259.75" cy="100" id="svg_13" rx="25" ry="24.5"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="259.75" cy="220" id="svg_14" rx="25" ry="24.5"/>
+
+
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="429.75" cy="190" id="svg_17" rx="25" ry="25"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="429.75" cy="130" id="svg_18" rx="25" ry="24.5"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="429.75" cy="250" id="svg_19" rx="25" ry="24.5"/>
+
+
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="600.25" cy="160" id="svg_1" rx="25" ry="25"/>
+                  <ellipse fill="#CBFFFF" stroke="#529DFF" stroke-width="2" cx="600.25" cy="220" id="svg_9" rx="25" ry="24.5"/>
+
+                </g>
+            </svg>
+          </section>
+        </div>
+
+        <div id="article_wrapper">
+          <div id="dnn_wrapper">
+            <section id="dnn_sec">
+                  <h2>Gęste Sieci Neuronowe</h2>
+                  <article>
+                    <h3>Definicja Sieci Neuronowych</h3>
+                    <p>Sieci neuronowe to zestaw algorytmów, modelowanych na podstawie ludzkiego mózgu, które są zaprojektowane do rozpoznawania wzorców. Interpretują dane poprzez pewien rodzaj maszynowego postrzegania, etykietowania lub grupowania surowych danych wejściowych. Rozpoznawane przez nich wzorce są numeryczne, zawarte w wektorach, na które muszą zostać przetłumaczone wszystkie rzeczywiste dane, czy to obrazy, dźwięk, tekst czy szeregi czasowe.</p>
+                    <p>Sieci neuronowe mogą służyć jako narzędzie każdego z podstawowych zadań uczenia maszynowego takich jak regresja, klasyfiacja, klasteryzacja czy wymiarowanie, a także zadań takich jak wykrywanie anomalii, reinforcement learning czy wiele innych odkrywanych wciąż zastosowań. Wszysztko zależy od zdefiniowanej przez nas architektury ,postaci wprowadzanych danych oraz sposobu ich interpretacji.
+                    </p>
+                    <p>Jakie problemy życia codziennego rozwiązuje głębokie uczenie? Żeby odpowiedzieć na to pytanie musimy postawić sobie kolejne:</p>
+                    <ul>
+                      <li>
+                        <p>Jakie dane wyjściowe mogą mnie interesować? Takie dane mogą służyć właśnie jako podstawa algorytmów sztucznej inteligencji. Na przykład, czy to co widzę to: 
+                          <code class="language-plaintext highlighter-rouge">spam</code>/ 
+                          <code class="language-plaintext highlighter-rouge">ham</code> w detekcji spamu twojej skrzynki pocztowej, 
+                          <code class="language-plaintext highlighter-rouge">good_guy</code> czy 
+                          <code class="language-plaintext highlighter-rouge">bad_guy</code> w wykrywaniu defraudacji, 
+                          <code class="language-plaintext highlighter-rouge">angry_customer</code> czy 
+                          <code class="language-plaintext highlighter-rouge">happy_customer</code> w feedbacku dla twojej firmy.
+                        </p>
+                      </li>
+                      <li>
+                        <p>Czy mam dane towarzyszące tym etykietom? Czy mogę znaleźć dane oznaczone etykietami lub mogę utworzyć zestaw danych oznaczonych etykietą (za pomocą usługi takiej jak AWS Mechanical Turk, Figure Eight lub Mighty.ai), w której spam został oznaczony jako spam, aby nauczyć algorytm korelacji między etykietami i danymi wejściowymi? Jeśli tak, dostajemy zielone światło do podjęcia kroków ku automatyzacji tego procesu przy użyciu narzędzi uczenia maszynowego, a przy odpowiednio dużej ilości danych, oraz odpowiednim potencjalnym zysku z wprowadzenia algorytmu sztucznej inteligincji, narzędzi uczenia głębokiego.</p>
+                      </li>
+                    </ul>
+                  <br>
+                <br>
+              </article>
+              <article>
+                <h3>Struktura Sieci Neuronowych</h3>
+                <p>Nazwa "głębokie uczenie" (ang. Deep Learning) bierze się z warstwowości architektur sieci neuroowych. Możemy to rozumieć dość dosłownie, ponieważ sieci te faktycznie zbudowane są z kolejnych warstw <em>węzłów/perceptronów</em>, połączonych <em>ścieżkami</em> z <em>warstwy do warstwy</em>.</p>
+                <p> Węzeł jest po prostu miejscem, w którym odbywają się obliczenia, luźno wzorowane na neuronie w ludzkim mózgu, który nadaje sygnał, gdy napotka wystarczające bodźce. Węzeł łączy dane wejściowe z zestawem współczynników lub <em>wag</em> na wspomnianych wyżej ścieżkach, które wzmacniają, albo tłumią to wejście, przypisując w ten sposób znaczenie węzłom w odniesieniu do zadania, którego algorytm próbuje się nauczyć; na przykład który węzeł jest najbardziej pomocny w klasyfikowaniu konkretnej kategorii danych bez błędów? Te produkty wagi wejściowej są sumowane, a następnie suma jest przekazywana przez tak zwaną funkcję aktywacyjną węzła, w celu ustalenia, czy i do jakiego stopnia sygnał powinien przejść dalej przez sieć, aby wpłynąć na ostateczny wynik, powiedzmy, akt klasyfikacji. Jeśli sygnały przechodzą, neuron został z pewną wagą <em>aktywowany</em>.</p><br/>
+
+                <p>Poniżej znajduje się ilustracja przykładowego węzła.</p>
+                <img src="img/ann/im1.png" class="art_img" alt="model perceptronu">
+                <p>Warstwa węzłów to rząd przełączników podobnych do neuronów, które włączają się lub wyłączają, gdy sygnał wejściowy przechodzi przez sieć. Dane wyjściowe każdej warstwy są jednocześnie wejściem kolejnej warstwy, zaczynając od początkowej warstwy wejściowej odbierającej dane.</p>
+                <img src="img/ann/im2.png" alt="model grafu sieci neuronowej">
+                <p>Powyżej przedstawiono przykład gęstej sieci neuronowej (DNN), to znaczy - sieci ze wszystkimi wyjściami warstwy podłączonymi do każdego z węzłów następnej warstwy jako jej wejścia.</p>
+              </article>
+               <article>
+                <h3>Proces uczenia sieci neuronowej</h3>
+                <p>Naszym celem w użyciu sieci neuronowej jest jak najszybsze osiągnięcie punktu najmniejszego błędu. Punkt początkowy to stan, w którym zainicjowane są nasze ciężary, a końcowym jest stan tych parametrów, gdy są one w stanie wygenerować wystarczająco dokładne klasyfikacje i prognozy.</p>
+                <p>Sieć zaczyna w niewiedzy, zgadując rozwiązanie. Naszym zadaniem jest więc używanie w fazie uczenia zestawu danych dla których znamy właściwe wyjście. Sieć dając błędną odpowiedż zostaje przez nas powiadomiona o tym jak duży błąd popełniła. Otrzymując taką informacje sieć oblicza jakie wagi powinna była przypisać poszczególnym ścieżkom żeby winik był zgodny z oczekiwanym. Przechowuje informacje o tych błędach po czym uśrednia ją dla każdej ścieżki po otrzymaniu ustalonej porcji danych (eng. <em>batch-size</em>), po czym stosownie ustawia nową wagę każdej z nich. Po zużyciu wszystkich danych treningowych, możemy powtórzyć proces od nowa w nowym epizodzie (eng. <em>epoch</em>)</p>
+                <p>Zbiór wag, niezależnie od tego, czy znajdują się w stanie początkowym, czy końcowym, jest również nazywany modelem, ponieważ jest próbą modelowania relacji danych do etykiet prawdy gruntowej w celu uchwycenia struktury danych. Modele zwykle zaczynają źle i kończą się lepiej, zmieniając się w czasie, gdy sieć neuronowa aktualizuje swoje parametry.</p>
+              </article>
+            </section>
+          </div>
+        <div id="cnn_wrapper">
+          <section id="cnn_sec">
+            <h2>Konwolucyjne Sieci Neuronowe</h2>
+            <article>
+              <h3>Definicja CNN</h3>
+              <p>Konwolucyjna(splotowa) sieć neuronowa (CNN) składa się z jednej lub więcej warstw splotowych (często z krokiem podpróbkowania), a następnie następuje jedna lub więcej w pełni połączonych warstw, jak w standardowej gęstej sieci neuronowej. Architektura CNN została zaprojektowana w celu wykorzystania struktury 2D/3D obrazu wejściowego (lub innego wejścia 2D, takiego jak sygnał mowy). Uzyskuje się to dzięki podejściu<em>lokalnemu</em> , to jest skupianiu się na konkretnej części danych (np na okienku 3px x 3px x 3(rgb) na obrazie), badania każdej lokalnej porcji na podstawie k <em>filtrów</em>, a następnie często skalowania wynku każdego filtrowania do np 25% pierwotnych danych. Powoduje to skupienie się nie tylko na cechach każdego piksela z osobna, ale na wielce istotnych w przypadku obrazów i dźwięku cechach sąsiedztwa z pobliskimi danymi. Kolejną zaletą CNN jest to, że łatwiej je trenować i mają o wiele mniej parametrów niż w pełni połączone sieci z taką samą liczbą jednostek ukrytych.
+              </p>
+            </article>
+            <article>
+              <h3>Architektura CNN</h3>
+              <p>Otrzymując 3-wymiarowe wejście (obraz m x n x 3 kanały rgb) pierwsza warstwa po wejściowej otrzyma k-wersji obrazu z wagą każdego piksela (z lub bez granicznych - zob. <em>padding</em>) ustawionego zgodnie z produktem filtra o okienku m x m (eng <em>kernel-size</em>) oraz każdego piksela z jego m x m sąsiadami.  Poniżej zaprezentowano taki proces.
+              <br>
+              <br>
+              <br>
+              <img src="img/cnn/maxpool/0.jpg" id="cnn_image" alt="Schemat filtrowania CNN">
+              <br>
+              <br>
+              W efekcie dostajemy j-krotnosc pierwotnych danych, gdzie 1 &lt; j &lt; k przy ilości filtrów k &gt; 3 (ponieważ nie każdy filtr musi patrzeć na wszystkie 3 kanały). Często więc chcielibyśmy zredukować ilość tych dancyh żeby nie zwiększały się eksponencjalnie wchodząc głębiej w naszą sieć.
+              W tym celu wynik watstwy konwolucyjnej przechodozi przez <em>warstwę podpróbkowania</em>, gdzie sąsiedztwo p x p każdego z wynikowych wyjść uśrednia się, a jego wartość zapisuje w <em>m/p x n/p x 3rgb </em> macierzy, która staje się wejściem dla kolejnej warstwy.
+             </p>
+              
+              <p>
+              Figura poniżej przedstawia zestawienie tych dwóch warstw w pełną konwolucjną sieć neuronową.
+              </p>
+              <br>
+              <img src="img/cnn/img2.png" alt="Schemat CNN">
+          </article>
+        </section>
+        </div>
+        <div id="rnn_wrapper">
+           <section id="rnn_sec">
+              <h2>Rekurencyjne Sieci Neuronowe</h2>
+              <article>
+                <h3>Definicja RNN</h3>
+                <p>Sieci rekurencyjne biorą za swój wkład nie tylko bieżący przykład wejścia, jaki widzą, ale także to, co wcześniej postrzegali w czasie.
+                <br>
+                <br>Decyzja, do której powraca sieć osiągnięta w kroku czasu t-1, wpływa na decyzję, którą podejmie ona chwilę później w kroku czasu t. Tak więc sieci rekurencyjne mają dwa źródła danych wejściowych, teraźniejszość i przeszłość, które łączą się w celu ustalenia, w jaki sposób reagują na nowe dane, podobnie jak my w życiu.
+                O ile nie ma to odniesienia do klasyfikacji rzeczy statycznych czasowo jak obrazy, ma ogromne znaczenie jeśli chodzi o badanie procesów odbywających się przez konkretną ilość czasu, gdzie wydarzenia z chwil poprzednich wpływają na te następujące po nich. Przykładem znanym każdemu może być przewidywanie pogody/temperatury , znając dane z poprzednich lat, miesięcy, dni czy godzin.
+                </p>
+              </article>
+              <article>
+                <h3>Komórka pamięci</h3>
+                <p>
+                Ta sekwencyjna informacja jest przechowywana w stanie ukrytym sieci, który może przechodzić przez wiele etapów czasowych, aby wpływać na przetwarzanie każdego nowego przykładu. Znajduje korelacje między zdarzeniami oddzielonymi wieloma momentami, a te korelacje nazywane są „długoterminowymi zależnościami”, ponieważ zdarzenie późniejsze zależy od i jest funkcją jednego lub więcej zdarzeń, które miały miejsce wcześniej. Jednym ze sposobów myślenia o RNN jest to, że są sposobem na dzielenie się wagami w czasie.
+                <br>
+                <br>Matematycznie, przechowywanie informacji (pamięć sieci) możemy przedstawić jako:
+                </p>
+                <img src="img/rnn/img1.png" alt="Stan ukryty RNN">
+                <p>
+                <br>
+                <br>Stan ukryty w kroku czasu t to h_t. Jest to funkcja wejścia w tym samym czasie x_t, zmodyfikowana przez macierz wag W (jak ta, której użyliśmy dla wszystkich pozostałych sieci poznanych w poprzednich artykułach) dodana do stanu ukrytego poprzedniego kroku czasowego h_t-1 pomnożona przez macierz prześcia ze stanu do stanu U, zwanej poprostu macierzą przejściową. Macierze wag są filtrami, które określają, jak duże znaczenie ma zarówno obecne wejście, jak i stan ukryty. Błąd, który generują, powróci w wyniku propagacji wstecznej i będzie używany do dostosowania ich wag, dopóki błąd nie spadnie niżej.
+                <br>
+                <br>Suma wprowadzonego ciężaru i stanu ukrytego jest przepuszczona przez funkcję φ - logistyczną funkcję sigmoidalną, albo tangensem hiperbolicznym. Ponieważ ta pętla sprzężenia zwrotnego występuje na każdym etapie serii, każdy stan ukryty zawiera ślady nie tylko poprzedniego stanu ukrytego, ale także wszystkich tych, które poprzedzały h_t-1 tak długo, jak długo pamięć może trwać.
+                <br>
+                <br>Biorąc pod uwagę przykład serii liter, sieć rekurencyjna użyje pierwszego znaku, aby określić jego "postrzeganie" drugiego znaku, tak że początkowe "ó"" może prowadzić do wniosku, że następna litera będzie "s" (ósemka), podczas gdy początkowe "t" może prowadzić do wywnioskować, że następną literą będzie na przykład "a".
+                <br>
+                <br>Rekurancyjne sieci neuronowe to bardzo rozległy i skompliwany temat, więc zamieszczone tu treści należy traktować jako wstęp opisujący generalne działanie tego typu algorytmów.
+                <br>
+              </p>
+              </article>
+           </section>
+        </div>
+        <div id="about_wrapper">
+          <section id="about_sec">
+            <h2>O stronie</h2>
+            <article>
+              <h3>Przeznaczenie / Purpouse</h3>
+              <p>This site is meant only for educational pourpouses and as a presentation for HTML and CSS capabilities. It uses copyrighted material, hence it is not meant for publicity or commercial use by any means. The author does not claim any legal rights to the site article's contents.
+              <br>
+              <br>
+              <br>
+              Ta strona jest przeznaczona tylko da celów edukacyjnych oraz jako prezentacja możliwości HTML5 i CSS3.0. Wykorzystuje materiały takie jak zdjęcia chronione prawami autorskimi, dlatego nie jest przeznaczona do rozprowadzania ani celów komercyjnych w jakikolwiek sposób. Autor nie rości sobie żadnych praw do treści zawartych na tej stronie.
+              </p>
+            </article>
+          </section>
+        </div>
+        </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
